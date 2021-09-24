@@ -1,0 +1,11 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.cell {
+    border-style: solid;
+    border-color: black;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
