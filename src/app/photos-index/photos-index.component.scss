@@ -1,11 +1,33 @@
-.grid {
+.gridZero {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.gridOne {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 50%;
 }
 
 .cell {
-    border-style: solid;
-    border-color: black;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-top: 5%;
     margin-bottom: 5%;
+}
+
+.title {
+    color: black;
+    text-overflow: ellipsis;
+}
+.title:hover{
+    cursor: pointer;
+}
+
+.display{
+    position:fixed;
+    top: 0px;
+    right: 0px;
+    height: 5%;
+    width: auto;
 }
