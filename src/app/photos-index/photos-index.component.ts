@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { PhotoService } from '../Services/photo.service';
 import { Photo } from '../Objects/Photo';
 import { Subscription } from 'rxjs';
@@ -16,7 +16,7 @@ export class PhotosIndexComponent implements OnInit {
   show: Boolean = false;
   showphotoid!: number;
 
-  constructor(private photoService: PhotoService, private router: Router) {
+  constructor(private photoService: PhotoService, private router: Router, private eRef: ElementRef) {
   }
 
   ngOnDestroy(): void{
