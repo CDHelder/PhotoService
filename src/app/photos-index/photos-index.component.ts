@@ -14,6 +14,7 @@ export class PhotosIndexComponent implements OnInit {
   photos: Photo[] = [];
   subscription!: Subscription;
   show: Boolean = false;
+  showphotoid!: number;
 
   constructor(private photoService: PhotoService, private router: Router) {
   }
@@ -38,6 +39,7 @@ export class PhotosIndexComponent implements OnInit {
 
   showImg(id: number) {
     console.log("show == false show image id: ", id)
+    this.showphotoid = id;
     this.photoService.getId(id, false);
     this.show = true;
   }

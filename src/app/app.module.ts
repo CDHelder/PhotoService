@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { PhotosIndexComponent } from './photos-index/photos-index.component';
 import { PhotoDetailComponent } from './photo-detail/photo-detail.component';
 import { PhotoComponent } from './photo/photo.component';
+import { PhotoOnChangeComponent } from './photo-on-change/photo-on-change.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PhotosIndexComponent,
     PhotoDetailComponent,
-    PhotoComponent
+    PhotoComponent,
+    PhotoOnChangeComponent
   ],
   imports: [
     BrowserModule,

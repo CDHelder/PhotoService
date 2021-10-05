@@ -33,11 +33,7 @@ export class PhotoService {
   }
 
   getId(id:number, bool:Boolean){
-    console.log("getting id {{id}}")
+    console.log("getting id:", id)
     this.idSource.next(id)
-
-    this.chosenId = this.idSource.asObservable();
-    this.changeBool = this.boolSource.asObservable();
-
   }
 }

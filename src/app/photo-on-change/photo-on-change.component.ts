@@ -1,23 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { Photo } from '../Objects/Photo';
 import { PhotoService } from '../Services/photo.service';
 
 @Component({
-  selector: 'app-photo',
-  templateUrl: './photo.component.html',
-  styleUrls: ['./photo.component.scss']
+  selector: 'app-photo-on-change',
+  templateUrl: './photo-on-change.component.html',
+  styleUrls: ['./photo-on-change.component.scss']
 })
-export class PhotoComponent implements OnInit {
+export class PhotoOnChangeComponent implements OnChanges {
 
   photo: Photo = {} as Photo;
-  id!: number;
+  @Input() id!: number;
 
   constructor(private photoService: PhotoService) { }
 
-  ngOnInit(): void {
+  ngOnChanges(): void {
     this.photoService.chosenId.subscribe(x => this.id = x)  
     this.photoService.getPhotoById(this.id).subscribe(y => this.photo = y)
 
     //this.employeeService.deleteEmployee(id).subscribe((data) =>{this.ngOnInit();})
   }
+
 }

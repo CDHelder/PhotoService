@@ -5,5 +5,5 @@
             <a class="title" (click)="onClick(p.id)">{{p.title}}</a>
         </div>
     </div>
-    <app-photo *ngIf="this.show" class="display"></app-photo>
+    <app-photo-on-change *ngIf="this.show" class="display" [id]="this.showphotoid" ></app-photo-on-change>
 </div>
